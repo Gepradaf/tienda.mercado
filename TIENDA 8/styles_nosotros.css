@@ -1,0 +1,178 @@
+/* Reseteamos los estilos por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Luxurious Script';
+    background:#edf8ee;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url("img/fondo.header.PNG") ; 
+    background-size: cover;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header img {
+    max-width: 200px; 
+    padding: 15px;
+}
+header h1{
+    color: white;
+    padding: 25px;
+    font-size: 30px;
+
+}
+.titulo-principal{
+    font-size: 35px;
+    padding-top: 0;
+    padding-bottom: 35px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #f6fcf9;
+    font-size: 25px;
+}
+
+nav a:hover{
+    color: #1933c7;
+    text-decoration:underline;
+}
+
+
+main {
+    
+    background:#edf8ee;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+#descripcion {
+    display: flex;
+    align-items: center;
+    
+
+}
+
+#descripcion img {
+    margin: 80px 6em 80px 10em;
+    width: 40%;
+}
+.texto{
+    flex: 1;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; 
+    margin: 0 15em 0 5px;
+    
+    
+}
+
+.texto h1 {
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+    color: black;
+    
+    
+}
+
+.texto p {
+    margin-bottom:210px;
+    font-size: 35px;
+    margin-top: 10px;
+    text-align: start;
+    color: #515553;
+    
+}
+
+/* Estilos para el footer */
+footer {
+    background: linear-gradient(to right,#d3e2b8, #cbdfb4, #d2ecb0 );
+    color: rgb(21, 88, 47);
+    padding: 20px 0;
+    text-align: center; 
+}
+
+.content-center {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+
+.content_contacto {
+    flex-basis: calc(25% - 40px);
+    text-align: left; 
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    padding: 10px; 
+}
+
+.content_contacto h2 {
+    font-size: 24px;
+    margin-bottom: 10px; 
+}
+
+.content_contacto p {
+    text-align: justify;
+    margin-bottom: 10px; 
+}
+
+.content_contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content_contacto ul li {
+    margin-bottom: 10px;
+}
+
+.content_contacto a {
+    color: #16168d;
+    text-decoration: none;
+}
+
+/* Para hacerlo responsivo */
+@media (max-width: 768px) {
+    .content_contacto {
+        flex-basis: calc(50% - 40px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .content_contacto {
+        flex-basis: calc(100% - 40px); 
+    }
+}
+@media screen and (max-width: 250px) {
+    .descripcion {
+      display: flex;
+    }
+    .texto{
+        width: 75% !important;
+    }
+    
+  }
+
+
