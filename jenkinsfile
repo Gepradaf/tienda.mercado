@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Clonar repositorio') {
+            steps {
+                // Checkout del repositorio desde GitHub
+                git 'https://github.com/Gepradaf/tienda.mercado.git'
+            }
+        }
+        stage('Construir') {
+            steps {
+                // Ejemplo de comando de construcción (ajústalo según tu proyecto)
+                sh 'mvn clean package'
+            }
+        }
+        stage('Pruebas') {
+            steps {
+                // Ejemplo de comando para ejecutar pruebas (ajústalo según tu proyecto)
+                sh 'mvn test'
+            }
+        }
+        stage('Desplegar') {
+            steps {
+                // Ejemplo de comandos para desplegar (ajústalos según tu proyecto)
+                sh 'ssh user@server "cd /path/to/deployment; ./deploy.sh"'
+            }
+        }
+    }
+}
